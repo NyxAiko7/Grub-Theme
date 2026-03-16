@@ -1,0 +1,77 @@
+# GRUB2 gfxmenu Linux theme
+# xkamysh - Custom Layout with Terminus 14
+
+
+# =========================================================
+# II. НАСТРОЙКИ ТЕКСТА И ФОНА
+# =========================================================
+# Main options
+title-text: ""
+desktop-image: "background.jpg"
+desktop-color: "#000000"
+terminal-font: "Terminus Regular 14"
+terminal-left: "0%"
+terminal-top: "0%"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+# =========================================================
+# III. КОМПОНЕНТЫ ТЕМЫ (Components)
+# =========================================================
+
+# 1. Boot menu (centered block)
++ boot_menu {
+    left = 35%
+    top = 35%
+    width = 30%
+    height = 40%
+    align = "center"
+    
+    item_font = "Terminus Regular 14"
+    item_color = "#000000"
+    selected_item_color = "#332b43"
+
+	
+
+
+
+	
+    
+    icon_height = 30
+    icon_width = 30
+    item_icon_space = 4
+    
+    item_height = 47
+    item_padding = 0
+    item_spacing = 6
+    selected_item_pixmap_style = "select_*.jpg"
+}
+
+# 2. Countdown (centered block under menu)
++ label {
+    left = 36%
+    top = 90%
+    width = 30%
+    align = "center"
+    text = "@KEYMAP_HINT@"
+    id = "__timeout__"
+    text = "In %ds, the path is chosen"
+    color = "#FF1493"
+    font = "Terminus Regular 14"
+}
+
+
+### --- SECONDS
++ progress_bar {
+  id = "__timeout__"
+  left = 69%
+  top = 74%
+  height = 2%  
+  width = 0%
+  font = "Terminus Regular 14" 
+  text_color = "#fbfbfb"  
+  text = "%d"
+  bar_style = "*"
+  highlight_style = "*"
+}
